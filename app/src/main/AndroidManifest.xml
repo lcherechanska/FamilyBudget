@@ -46,6 +46,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lcherechanska.familybudget.MainActivity" />
         </activity>
+        <activity
+            android:name=".main.TransactionsFragment"
+            android:label="@string/title_activity_display_expense"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lcherechanska.familybudget.MainActivity" />
+        </activity>
+        <activity android:name=".fragments.ExpenseActivity" />
+        <activity android:name=".fragments.IncomeActivity" />
+        <activity
+            android:name=".main.AddCategoryActivity"
+            android:label="@string/title_activity_add_category"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lcherechanska.familybudget.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

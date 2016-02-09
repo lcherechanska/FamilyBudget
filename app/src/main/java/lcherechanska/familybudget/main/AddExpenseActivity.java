@@ -38,6 +38,7 @@ public class AddExpenseActivity extends AppCompatActivity {
     }
 
     public void saveExpense(View view) {
+
         EditText editDate = (EditText) findViewById(R.id.input_date);
         Date date = Date.valueOf(editDate.getText().toString());
 

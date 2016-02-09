@@ -1,31 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:baselineAligned="false"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main">
 
-    <EditText
-        android:id="@+id/edit_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/edit_message" />
+    <View
+        android:id="@+id/SplitLine_hor1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@+id/button_addExpense"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="77dp"
+        android:background="@color/colorSeparator" />
 
     <Button
         android:id="@+id/button_addExpense"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
+        android:layout_toEndOf="@+id/button_addAccount"
+        android:layout_toRightOf="@+id/button_addAccount"
         android:onClick="addExpense"
-        android:text="@string/label_add" />
+        android:text="Expense" />
 
     <Button
+        android:id="@+id/button_addIncome"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_addExpense"
+        android:layout_alignBottom="@+id/button_addExpense"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
         android:onClick="sendMessage"
-        android:text="@string/button_send" />
-</LinearLayout>
+        android:text="Income" />
+
+    <Button
+        android:id="@+id/button_addAccount"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_addIncome"
+        android:layout_alignStart="@+id/button_addIncome"
+        android:layout_below="@+id/button_addIncome"
+        android:layout_gravity="center"
+        android:text="Account" />
+
+    <Button
+        android:id="@+id/button5"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_addExpense"
+        android:layout_alignStart="@+id/button_addExpense"
+        android:layout_alignTop="@+id/button_addAccount"
+        android:layout_gravity="center"
+        android:text="Budget" />
+
+    <View
+        android:id="@+id/SplitLine_hor2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_addAccount"
+        android:layout_marginTop="48dp"
+        android:background="@color/colorSeparator" />
+
+</RelativeLayout>

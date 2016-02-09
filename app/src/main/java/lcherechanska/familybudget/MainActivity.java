@@ -10,12 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 
 import java.util.Locale;
 
 import lcherechanska.familybudget.main.AddExpenseActivity;
-import lcherechanska.familybudget.main.DisplayMessageActivity;
+import lcherechanska.familybudget.main.TransactionsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view){
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE,message);
+        Intent intent = new Intent(this, TransactionsFragment.class);
+        //  EditText editText = (EditText) findViewById(R.id.edit_message);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
     }
 

@@ -33,7 +33,7 @@ public class ExpenseSQLite extends SQLiteOpenHelper {
             "CREATE TABLE "
                     + EXPENSE_TABLE_NAME +
                     "("
-                    + EXPENSE_COLUMN_ID + " INTEGER PRIMARY KEY, "
+                    + EXPENSE_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + EXPENSE_COLUMN_DATE + " DATE,"
                     + EXPENSE_COLUMN_PRICE + " NUMBER, "
                     + EXPENSE_COLUMN_DESCRIPTION + " TEXT"

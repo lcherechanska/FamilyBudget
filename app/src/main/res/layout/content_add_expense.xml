@@ -30,17 +30,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Main Info"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorSeparator" />
 
             <View
                 android:id="@+id/SplitLine_hor1"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="#c0c0c0" />
+                android:background="@color/colorSeparator" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="10dp"
@@ -54,22 +55,29 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Date"
+                android:text="@string/label_date"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <EditText
                 android:id="@+id/input_date"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:ems="10"
                 android:inputType="date"
-                android:onClick="showDatePickerDialog" />
+                android:onClick="showDatePickerDialog"
+                android:textColor="@color/colorText" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_email" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:layout_marginBottom="0dp"
@@ -84,17 +92,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="0dp"
-                android:text="Price"
+                android:text="@string/label_price"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <EditText
                 android:id="@+id/input_price"
-                android:layout_width="match_parent"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:ems="10"
-                android:inputType="number|numberDecimal" />
+                android:inputType="number|numberDecimal"
+                android:textColor="@color/colorText" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_save" />
 
         </LinearLayout>
 
@@ -111,13 +126,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Additional Info"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorSeparator" />
 
             <View
                 android:id="@+id/SplitLine_hor2"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="5dp"
-                android:background="#c0c0c0" />
+                android:background="@color/colorSeparator" />
         </LinearLayout>
 
         <LinearLayout
@@ -132,7 +148,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category"
+                android:text="@string/label_category"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <Spinner
@@ -142,30 +158,20 @@
                 android:layout_gravity="center_horizontal"
                 android:spinnerMode="dropdown" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
             <EditText
                 android:id="@+id/input_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shop"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/label_description"
+                android:textColor="@color/colorText" />
 
             <EditText
                 android:id="@+id/input_shop"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/label_shop"
+                android:textColor="@color/colorText" />
         </LinearLayout>
 
         <Button
@@ -174,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Add" />
+            android:text="@string/label_description" />
 
     </LinearLayout>
 

@@ -7,15 +7,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 import lcherechanska.familybudget.utils.Constants;
 
 /**
- * Created by lcherechanska on 4.2.2016 г..
+ * Created by lcherechanska on 5.2.2016 г..
  */
-public class CategorySQLite extends SQLiteOpenHelper {
+public class AccountSQLite extends SQLiteOpenHelper {
 
-    public static final String EXPENSE_TABLE_NAME = "category";
+    public static final String EXPENSE_TABLE_NAME = "account";
     public static final String EXPENSE_COLUMN_ID = "id";
     public static final String EXPENSE_COLUMN_NAME = "name";
-    public static final String EXPENSE_COLUMN_PARENT_ID = "parent_id";
-    public static final String EXPENSE_COLUMN_IS_PARENT = "isParent";
+    public static final String EXPENSE_COLUMN_DESCRIPTION = "description";
+    public static final String EXPENSE_COLUMN_AMOUNT = "amount";
+    public static final String EXPENSE_COLUMN_REPEAT_INCOME = "currency";
+    public static final String EXPENSE_COLUMN_TYPE = "type";
+    public static final String EXPENSE_COLUMN_DATE_INCOME = "date";
 
     // Database creation sql statement
     private static final String DATABASE_CREATE =
@@ -24,11 +27,14 @@ public class CategorySQLite extends SQLiteOpenHelper {
                     "("
                     + EXPENSE_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + EXPENSE_COLUMN_NAME + " TEXT,"
-                    + EXPENSE_COLUMN_PARENT_ID + " INTEGER,"
-                    + EXPENSE_COLUMN_IS_PARENT + " INTEGER DEFAULT 0" +
+                    + EXPENSE_COLUMN_DESCRIPTION + " TEXT,"
+                    + EXPENSE_COLUMN_AMOUNT + " INTEGER,"
+                    + EXPENSE_COLUMN_REPEAT_INCOME + " INTEGER DEFAULT 0,"
+                    + EXPENSE_COLUMN_DATE_INCOME + " DATE," +
                     ")";
 
-    public CategorySQLite(Context context) {
+
+    public AccountSQLite(Context context) {
         super(context, Constants.DATABASE_NAME, null, Constants.DATABASE_VERSION);
     }
 
