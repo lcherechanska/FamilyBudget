@@ -18,7 +18,7 @@ public class Expense {
     public Expense() {
     }
 
-    public Expense(int id, Date date, int price, String description) {
+    public Expense(int id, Date date, int price, String description, String category, String shop, String payFrom) {
         this.id = id;
         this.date = date;
         this.price = price;
@@ -26,6 +26,13 @@ public class Expense {
         this.category = category;
         this.shop = shop;
         this.payFrom = payFrom;
+    }
+
+    public Expense(int id, Date date, int price, String description) {
+        this.id = id;
+        this.date = date;
+        this.price = price;
+        this.description = description;
     }
 
     public int getId() {

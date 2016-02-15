@@ -58,6 +58,10 @@ public class AddExpenseActivity extends AppCompatActivity {
 
     }
 
+    public void showCategoryList() {
+
+    }
+
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment((EditText) findViewById(R.id.input_date));
         newFragment.show(getSupportFragmentManager(), "datePicker");

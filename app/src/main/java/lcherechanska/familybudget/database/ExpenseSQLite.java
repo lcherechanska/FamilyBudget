@@ -24,7 +24,7 @@ public class ExpenseSQLite extends SQLiteOpenHelper {
     public static final String EXPENSE_COLUMN_DATE = "date";
     public static final String EXPENSE_COLUMN_PRICE = "price";
     public static final String EXPENSE_COLUMN_DESCRIPTION = "description";
-    public static final String EXPENSE_COLUMN_CATEGORY = "category";
+    public static final String EXPENSE_COLUMN_CATEGORY_ID = "category_id";
     public static final String EXPENSE_COLUMN_SHOP = "shop";
     public static final String EXPENSE_COLUMN_PAYFROM = "payfrom";
 
@@ -36,10 +36,12 @@ public class ExpenseSQLite extends SQLiteOpenHelper {
                     + EXPENSE_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + EXPENSE_COLUMN_DATE + " DATE,"
                     + EXPENSE_COLUMN_PRICE + " NUMBER, "
-                    + EXPENSE_COLUMN_DESCRIPTION + " TEXT"
-                    + EXPENSE_COLUMN_CATEGORY + " TEXT"
-                    + EXPENSE_COLUMN_SHOP + " TEXT"
-                    + EXPENSE_COLUMN_PAYFROM + " TEXT" +
+                    + EXPENSE_COLUMN_DESCRIPTION + " TEXT,"
+                    + EXPENSE_COLUMN_CATEGORY_ID + " TEXT,"
+                    + EXPENSE_COLUMN_SHOP + " TEXT,"
+                    + EXPENSE_COLUMN_PAYFROM + " TEXT,"
+                    + "FOREIGN KEY (" + EXPENSE_COLUMN_CATEGORY_ID + ") REFERENCES "
+                    + CategorySQLite.CATEGORY_TABLE_NAME + "(" + CategorySQLite.CATEGORY_COLUMN_ID + ")" +
                     ")";
 
     public ExpenseSQLite(Context context) {

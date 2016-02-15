@@ -10,6 +10,8 @@ public class Category {
     private int parentCategoryId;
     private boolean isParent;
 
+    public Category(){}
+
     public Category(int id, String name, boolean isParent) {
         this.id = id;
         this.name = name;
